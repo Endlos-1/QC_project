@@ -2555,6 +2555,8 @@ body.page #main-content {
 	color: #ffffff;
 }
 
+
+
 .topbar-style-4 #top-bar #top-bar-inner {
 	border-bottom: 1px solid;
 	border-color: rgba(255, 255, 255, 0.2);
@@ -2603,7 +2605,7 @@ body.page #main-content {
 }
 
 #site-logo .site-logo-text:hover {
-	color: #00abc9;
+	color: #010196;
 }
 
 .menu-has-search #site-header #main-nav {
