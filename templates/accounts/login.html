@@ -40,14 +40,14 @@
   <div class="container" style="padding-top: 160px;">
     
     <!-- Submit button -->
-    <form method="POST">
+    <form method="POST"action="{% url 'accounts:login %}">
       {% csrf_token %}
-      {{ login_form|crispy }}
+      {{ form}}
       <button class="btn btn-primary" type="submit">Login</button>
 
       <!-- Register buttons -->
       <div class="text-center">
-        <p>Not a member? <a href="{% url 'register' %}">Register</a></p>
+        <p>Not a member? <a href="{% url 'accounts:register' %}">Register</a></p>
        
 
 
