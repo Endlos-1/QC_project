@@ -1,4 +1,5 @@
 {% load static %}
+{% load custom_tags %}
 {% block a %}
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"> <![endif]-->
@@ -34,7 +35,7 @@
 </head>
 
 {% block head %}
-<body class="page header-fixed no-sidebar site-layout-full-width header-style-2 has-topbar topbar-style-2 menu-has-search menu-has-cart">
+<body class="page header-fixed no-sidebar site-layout-full-width has-topbar menu-has-search menu-has-cart">
 
 <div id="wrapper" class="animsition">
 <div id="page" class="clearfix">
@@ -85,7 +86,7 @@
                     <div class="wrap-inner">
                         <div id="site-logo" class="clearfix">
                              <div id="site-logo-inner">
-                                <a href="{% url 'index' %}" title="Finance" rel="home" class="main-logo"><img src="{% static 'home/img/imagebox/logo.jpg' %}" width="200" height="80" alt="Finance" data-retina="{%static 'home/img/logo.png' %}" data-width="250" data-height="60"></a>
+                                <a href="{% url 'index' %}" title="Finance" rel="home" class="main-logo"><img src="{% static 'home/img/imagebox/mainlogo.jpg' %}" width="200" height="80" alt="Finance" data-retina="{%static 'home/img/logo.png' %}" data-width="250" data-height="60"></a>
                             </div>
                         </div>
                         {% comment %} <div id="site-logo" class="clearfix">
@@ -99,7 +100,7 @@
 
                         <nav id="main-nav" class="main-nav">
                             <ul id="menu-primary-menu" class="menu">
-                                <li class="menu-item current-menu-item menu-item-has-children"><a href="{% url 'index' %}">HOME</a>
+                                <li class="menu-item"><a href="{% url 'index' %}">HOME</a>
 <!--                                    <ul class="sub-menu">-->
 <!--                                        <li class="menu-item current-item"><a href="home.html">Home 1</a></li>-->
 <!--                                        <li class="menu-item"><a href="home-2.html">Home 2</a></li>-->
@@ -119,7 +120,7 @@
 <!--&lt;!&ndash;                                                <li class="menu-item"><a href="home-header-style5.html">Header Style 5</a></li>&ndash;&gt;-->
 <!--&lt;!&ndash;                                            </ul>&ndash;&gt;-->
                                         </li>
-                                        <li class="menu-item menu-item-has-children"><a href="#how">HOW IT WORKS</a>
+                                        <li class="menu-item menu-item-has-children"><a href="{% anchor 'index' 'how' %}">HOW IT WORKS</a>
 <!--                                    <ul class="sub-menu">-->
 <!--                                        <li class="menu-item menu-item-has-children"><a href="home.html">Headers</a>-->
 <!--&lt;!&ndash;                                            <ul class="sub-menu">&ndash;&gt;-->
@@ -325,7 +326,7 @@
                             <div class="widget widget_text padding-left-7">
                                 <div class="textwidget">
                                     <p class="margin-bottom-22">
-                                        <img src="{% static 'home/img/imagebox/image.png' %}" width="226" height="50" alt="Finance"
+                                        <img src="{% static 'home/img/imagebox/photoQC.jpg' %}" width="500" height="50" alt="Finance"
                                             data-retina="{% static 'home/img/logo-footer@2x.png' %}" data-width="226"
                                             data-height="50">
                                     </p>
