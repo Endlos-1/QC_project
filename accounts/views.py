@@ -24,7 +24,7 @@ def signin(request):
             user = form.get_user()
             print('user')
             email = form.cleaned_data.get("email")
-            send_mail_after_registration(email)
+            # send_mail_after_registration(email)
             print(user)
             login(request, user)
             return redirect("home:index")
@@ -32,12 +32,12 @@ def signin(request):
         form = LoginForm()
     return render(request,'accounts/login.html',{'form':form})
 
-def send_mail_after_registration(email):
-    subject = "You Account has been Successfully created"
-    message = f"Welocme to ENDLOS"
-    email_from = settings.EMAIL_HOST_USER
-    recipient_list = [email]
-    send_mail(subject, message, email_from, recipient_list)
+# def send_mail_after_registration(email):
+#     subject = "You Account has been Successfully created"
+#     message = f"Welocme to ENDLOS"
+#     email_from = settings.EMAIL_HOST_USER
+#     recipient_list = [email]
+#     # send_mail(subject, message, email_from, recipient_list)
 
 def signout(request):
     if request.method == 'POST':

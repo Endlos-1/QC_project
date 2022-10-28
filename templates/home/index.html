@@ -427,7 +427,8 @@
                         <!-- END SERVICES IMAGEBOXS -->
                         <div class="text-right"> 
                             <span class="text-right mr-3" style="weight:120px;color:black;">Learn More: </span>
-                            <button type="button" class="btn btn-primary mr-4">FAQ</button>
+                            <button type="button" class="btn btn-primary mr-4"style="color:white">
+                                <a href="{%url 'home:agent_Faq'%}">FAQ</a></button>
                         </div> <br>
                         <!-- FACTS -->
                         <div class="row-facts-1 parallax parallax-overlay">
@@ -828,7 +829,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="button-wrap">
-                                                    <a href="{% url 'applynow' %}"
+                                                    <a href="{% url 'home:applynow' %}"
                                                         class="themesflat-button white font-weight-600 margin-top-10 margin-bottom-13"
                                                         style="background-color: #00FF00;color: #f7f7f7; box-shadow: 5px 5px 5px darkgray;
                                                         ">APPLY TODAY

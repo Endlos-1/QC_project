@@ -40,7 +40,7 @@
   <div class="container" style="padding-top: 160px;">
     
     <!-- Submit button -->
-    <form method="POST"action="{% url 'accounts:login %}">
+    <form method="POST"action="{% url 'accounts:signin' %}">
       {% csrf_token %}
       {{ form}}
       <button class="btn btn-primary" type="submit">Login</button>
